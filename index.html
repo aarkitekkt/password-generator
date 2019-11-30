@@ -6,12 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Password Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 </head>
 
 <body>
-    <h1>Password Generator</h1>
+    <div class="jumbotron jumbotron-fluid border-bottom border-dark">
+        <div class="container justify-content-center">
+            <h1 class="display-5 text-center">Password Generator</h1>
+        </div>
+    </div>
 
-    <p id="pwd"></p>
+    <div class="container bg-light">
+        <div class="row">
+            <div class="col">
+                <h3 class="text-center">Generate your secure password</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control text-center" placeholder="Your Secure Password">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <button type="button" class="btn btn-primary btn-lg">Generate</button>
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn btn-primary btn-lg">Copy</button>
+            </div>
+        </div>
+    </div>
 
     <script src="java.js"></script>
 </body>

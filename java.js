@@ -58,10 +58,5 @@ function generator(l, x) {
 
 
 
-document.getElementById("pwd").innerHTML = pwd;
-
-
-
-
 
 
