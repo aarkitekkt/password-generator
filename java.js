@@ -1,16 +1,13 @@
-var characters = "";
-var charOptions = {
-    numbers: "0123456789",
-    special: "#$%&'()*+,-./:;<=>?@^_`{|}~",
-    lower: "abcdefghijklmnopqrstuvwxyz",
-    upper: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-}
 //Prompt asking for desired password length
 var length = prompt("Enter password length(8-128)");
 
-//Check to see if password length is is the correct range.
+//Check to see if password length is in the correct range and is a number.
 while (length < 8 || length > 128) {
     alert("Password must be in between 8 and 128 characters");
+    var length = prompt("Enter password length(8-128)");
+}
+while (isNaN(length) === true) {
+    alert("Must enter a number");
     var length = prompt("Enter password length(8-128)");
 }
 //Prompts to find out which types of characters to be included in password.
@@ -29,6 +26,14 @@ while (numbersConfirm === false && specialConfirm === false && upperConfirm === 
 }
 
 //Combine all selected character types into single string.
+var charOptions = {
+    numbers: "0123456789",
+    special: "#$%&'()*+,-./:;<=>?@^_`{|}~",
+    lower: "abcdefghijklmnopqrstuvwxyz",
+    upper: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+}
+var characters = "";
+
 if (numbersConfirm === true) {
     characters += charOptions.numbers;
 }
@@ -42,18 +47,25 @@ if (lowerConfirm === true) {
     characters += charOptions.lower;
 }
 
+//when "Generate" button is clicked, run the function to generate the password and fill text box with password.
+document.getElementById("generate").onclick = function () { passFill() };
 
-console.log(generator(length, characters))
-
+function passFill() {
+    var password = generator(length, characters);
+    document.getElementById("passwordBox").value = password;
+}
 
 //Function to generate password given the length and character inputs.
-function generator(l, x) {
-    var password = "";
+function generator(l, c) {
+    var pw = "";
     for (i = 0; i < l; i++) {
-        password += x.charAt(Math.floor(Math.random() * x.length));
+        pw += c.charAt(Math.floor(Math.random() * c.length));
     }
-    return password;
+    return pw;
 }
+
+
+
 
 
 
