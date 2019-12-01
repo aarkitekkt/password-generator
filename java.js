@@ -2,12 +2,12 @@
 var length = prompt("Enter password length(8-128)");
 
 //Check to see if password length is in the correct range and is a number.
-while (length < 8 || length > 128) {
-    alert("Password must be in between 8 and 128 characters");
-    var length = prompt("Enter password length(8-128)");
-}
 while (isNaN(length) === true) {
     alert("Must enter a number");
+    var length = prompt("Enter password length(8-128)");
+}
+while (length < 8 || length > 128) {
+    alert("Password must be in between 8 and 128 characters");
     var length = prompt("Enter password length(8-128)");
 }
 

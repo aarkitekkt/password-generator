@@ -8,39 +8,41 @@
     <title>Password Generator</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <div class="jumbotron jumbotron-fluid border-bottom border-dark">
+    <div id="jumbotron" class="jumbotron jumbotron-fluid">
         <div class="container justify-content-center">
-            <h1 class="display-5 text-center">Password Generator</h1>
+            <h1 class="text-center display-4">Password Generator</h1>
         </div>
     </div>
 
-    <div class="container bg-light">
-        <div class="row">
+    <div id="box" class="container bg-light rounded-lg">
+        <div class="row my-3">
             <div class="col">
-                <h3 class="text-center">Generate your secure password</h3>
+                <h4 class="text-center mt-3">Generate your secure password</h3>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <input id="passwordBox" type="text" class="form-control text-center" placeholder="Your secure password"
-                    value="">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <input id="passwordBox" type="text" class="form-control text-center my-3"
+                    placeholder="Your secure password" value="">
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center pb-3">
             <div class="col-6">
-                <button id="generate" type="button" class="btn btn-primary btn-lg">Generate</button>
+                <button id="generate" type="button" class="btn btn-outline-info btn-block">Generate</button>
             </div>
             <div class="col-6">
-                <button id="copy" type="button" class="btn btn-primary btn-lg">Copy</button>
+                <button id="copy" type="button" class="btn btn-outline-info btn-block">Copy</button>
             </div>
         </div>
     </div>
 
-    <script src="java.js"></script>
+    <!-- <script src="java.js"></script> -->
 </body>
 
 </html>
