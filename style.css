@@ -5,6 +5,7 @@
 
 #passwordBox {
     height: 200px;
+    overflow-wrap: normal;
 }
 
 #box {
