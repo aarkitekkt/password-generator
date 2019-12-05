@@ -14,7 +14,14 @@ The biggest challenge for this application was figuring out how to combine the d
 
 Once the password length and character types are determined, a function using a for loop and random number generater creates a password randomly chosen from the string of characters.  This password is then displayed in the input field to be seen in the browser.
 
-The application featurs a combination of bootstrap elements and style classes and a separate custom style sheet.
+The application featurs a combination of bootstrap elements and style classes and a separate custom style sheet.  This application is also responsive and will work on mobile devices.
+
+## Screengrabs
+
+https://github.com/aarkitekkt/password-generator/blob/master/screengrabs/main.JPG
+https://github.com/aarkitekkt/password-generator/blob/master/screengrabs/Capture.JPG
+https://github.com/aarkitekkt/password-generator/blob/master/screengrabs/mobile.JPG
+https://github.com/aarkitekkt/password-generator/blob/master/screengrabs/prompts.JPG
 
 
 
